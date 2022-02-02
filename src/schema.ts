@@ -1,5 +1,4 @@
 import Joi, { CustomValidator } from 'joi'
-import base from '../locales/base.json'
 import i18next from 'i18next'
 import fs from 'fs'
 import { URL } from 'url'
@@ -11,7 +10,7 @@ i18next
   .init({
     resources: {
       base: {
-        translation: base,
+        translation: require('../locales/base.json'),
       },
     },
     lng: 'base',
